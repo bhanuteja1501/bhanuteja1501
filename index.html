@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Survey form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style >
+      h2{
+        display:contents;
+      }
+    </style>
+  </head>
+  <body>
+
+    <form action="pages/page2.html" method="post">
+
+      <h1>Survey Form</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="uname"><strong>Stundent Name</strong></label>
+        <input id="name" type="text" placeholder="Enter name" name="uname" required>
+        <label for="psw"><strong>College Name</strong></label>
+        <input id="college" type="text" placeholder="Enter College Name" name="psw" required>
+        <label for="psw"><strong>Year of Pass</strong></label>
+        <input id="year" type="number" placeholder="Enter Year" name="psw" required>
+      </div>
+      <button type="submit" onclick="getValues()"> Submit</button>
+    </form>
+
+    <script>
+        function getValues(){
+
+            var name =document.getElementById("name").value;
+            var college =document.getElementById("college").value;
+            var year =document.getElementById("year").value;
+
+            localStorage.setItem("Value1", name);
+            localStorage.setItem("Value2", college);
+            localStorage.setItem("Value3", year);
+        }
+    </script>
+<footer>
+  <p>TCS assignment-2 by Bhanu Teja Dadi </p>
+</footer>
+  </body>
+</html>

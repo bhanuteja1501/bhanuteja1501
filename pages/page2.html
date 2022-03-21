@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Confirm Survey form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .btnStack, button {
+        font-family: Oswald;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.428571429;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+
+      a.btnStack:hover, button:hover {
+        background-color: #000;
+      }
+    </style>
+  </head>
+<form >
+  <h1>Confirm Your Details</h1><br>
+  <div class="formcontainer">
+  <hr/>
+  <div class="container">
+    <label for="uname"><strong>Stundent Name : <span id="name1"></span></h3></strong></label><br><br>
+
+    <label for="psw"><strong>College Name : <span id="cname"></span></strong></label><br><br>
+
+    <label for="psw"><strong>Year of Pass : <span id="year1"></span></strong></label><br><br>
+
+  </div>
+</form>
+  <p>Please verify your data before submitting</p>
+
+    <a href="javascript:history.back()" class="btnStack"> Back </a>
+    <a href="page3.html" class="btnStack"> Confirm </a>
+  <script>
+
+   document.getElementById("name1").innerHTML=localStorage.getItem("Value1");
+   document.getElementById("cname").innerHTML=localStorage.getItem("Value2");
+   document.getElementById("year1").innerHTML=localStorage.getItem("Value3");
+
+
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+  <form action="page2.html" method="get">
+
+    Name:<input id="name" type="text"><br><br>
+    college:<input id="college" type="text"><br><br>
+    year:<input id="year" type="text"><br><br>
+    <input type="submit" onclick="getValues()" value="Submit" ><br>
+  </form>
+  <br>
+  <button onclick="clrfunc()"> Clear</button>
+
+          <script>
+              function getValues(){
+
+                  var name =document.getElementById("name").value;
+                  var college =document.getElementById("college").value;
+                  var year =document.getElementById("year").value;
+
+                  localStorage.setItem("Value1", name);
+                  localStorage.setItem("Value2", college);
+                  localStorage.setItem("Value3", year);
+              }
+              function clrfunc(){
+                  document.getElementById("name").innerHTML="";
+                  document.getElementById("college").innerHTML="";
+                  document.getElementById("year").innerHTML="";
+              }
+          </script>
+          </body>
+          </html>
